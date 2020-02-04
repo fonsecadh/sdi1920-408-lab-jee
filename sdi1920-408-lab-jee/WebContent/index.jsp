@@ -19,15 +19,8 @@
 </script>
 </head>
 <body>
-	<%
-		Integer contador = (Integer) application.getAttribute("contador");
-
-		if (contador != null) {
-			contador = new Integer(0);
-		}
-
-		application.setAttribute("contador", contador.intValue() + 1);
-	%>
+	<jsp:useBean id="contador" class="com.uniovi.sdi.Contador" scope="application" />
+	<jsp:setProperty name="contador" property="incremento" value="1" />
 
 	<!-- Barra de Navegación superior -->
 	<nav class="navbar navbar-default">
@@ -38,7 +31,7 @@
 			<li><a href="admin.jsp">Administrar productos</a></li>
 		</ul>
 		<div class="nav navbar-right">
-			<%=contador%>
+			<jsp:getProperty name="contador" property="total" />
 			Visitas
 		</div>
 	</div>
@@ -55,10 +48,10 @@
 				<div>
 					<img src="<%=producto.getImagen()%>" />
 					<div><%=producto.getNombre()%></div>
-					<a href="incluirEnCarrito?producto=<%=producto.getNombre()%>
-						" class="btn btn-default"><%=producto.getPrecio()%>
-						€
-					</a>
+					<a
+						href="incluirEnCarrito?producto=<%=producto.getNombre()%>
+						"
+						class="btn btn-default"><%=producto.getPrecio()%> € </a>
 				</div>
 			</div>
 			<%
