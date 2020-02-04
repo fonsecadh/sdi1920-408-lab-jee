@@ -1,5 +1,6 @@
 <%@page language="java" contentType="text/html; charset=utf-8"
-	pageEncoding="utf-8"%><!DOCTYPEhtml PUBLIC"-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="utf-8"%>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html lang="en">
 <head>
 <title>JSP</title>
@@ -45,7 +46,7 @@
 						class="btn btn-default">2.10 €</a>
 				</div>
 			</div>
-			<div class="col-xs-12col-sm-6 col-md-4col-lg-3">
+			<div class="col-xs-12 col-sm-6 col-md-4col-lg-3">
 				<div>
 					<img src="img/iconfinder_bread.png" />
 					<div>Pan</div>
